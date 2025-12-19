@@ -12,11 +12,7 @@ def multi_neuron(inputs, weights, biases):
     -------------
     weighted_sum
     '''
-    weighted_sum = []
-    for neuron_weight, bias in zip(weights, biases):
-        output = np.dot(inputs, neuron_weight) + bias
-        weighted_sum.append(output)
-    return np.asarray(weighted_sum)
+    return np.dot(weights, inputs) + biases
 
 if __name__ == '__main__':
     i = [1, 2, 3, 2.5]
